@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+    <!-- Global CSS (CSS rules you want applied to all pages) -->
+    <link rel="stylesheet" href="../global.css">
+
+    <!-- Page-specific CSS -->
+    <link rel="stylesheet" href="./profile.css">
+
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+
+    <title>/POSTS</title>
+
+    <!-- Run BEFORE page is finished loading (before window.onload): -->
+    <script src="../auth.js"></script>
+    <script>
+        if (isLoggedIn() === false) window.location.replace("/");
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container">
+                <a class="navbar-brand" href="#">CHIT CHAT</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/profile/">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/posts">Posts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#" id="logout">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <div class="profile-card">
+            <div class="image">
+                <img src="https://westernusc.ca/wp-content/uploads/2016/09/1C-Rasta-Lion.jpg" alt=""
+                    class="profile-img" />
+            </div>
+            <div class="text-data">
+                <span class="name">Biniam10</span>
+            </div>
+            <div class="buttons">
+                <button class="button">Edit Profile</button>
+                <button class="button">Share Profile</button>
+            </div>
+            <div class="analytics">
+                <div class="data">
+                    <span class="number">Follower 3M</span>
+                </div>
+                <div class="data">
+                    <span class="number">Following 0</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="card" id="formDiv">
+        <form id="postForm">
+            <div id="postForm" class="mb-4" style="width: 20vh;">
+                <label for="text" class="form-label">New Post</label>
+                <input class='input-box' type="text" name="text" id="text" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-dark">Post</button>
+        </form>
+    </div>
+
+
+    <div id="cards" class="row row-cols-1 row-cols-lg-3 g-0">
+        <div class="col ">
+            <div class="card" style="width: 20rem;">
+                <img src="https://wallpapercave.com/wp/wp4598175.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <i class="bx bx-heart"></i>
+                    <i class="bx bx-message-rounded"></i>
+                    <i class="bx bx-share"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col ">
+            <div class="card" style="width: 20rem;">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.FjDXXP7n2fNtr0aEM8WTfgHaEK&pid=Api&P=0&h=220"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <i class="bx bx-heart"></i>
+                    <i class="bx bx-message-rounded"></i>
+                    <i class="bx bx-share"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col ">
+            <div class="card" style="width: 20rem;">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.d3Q6PFzlj_oaQZYeA_ovSAHaEK&pid=Api&P=0&h=220"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <i class="bx bx-heart"></i>
+                    <i class="bx bx-message-rounded"></i>
+                    <i class="bx bx-share"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col ">
+            <div class="card" style="width: 20rem;">
+                <img src="https://vectorified.com/image/starry-night-sky-vector-1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <i class="bx bx-heart"></i>
+                    <i class="bx bx-message-rounded"></i>
+                    <i class="bx bx-share"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col ">
+            <div class="card" style="width: 20rem;">
+                <img src="https://wallpapercave.com/wp/wp4700542.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <i class="bx bx-heart"></i>
+                    <i class="bx bx-message-rounded"></i>
+                    <i class="bx bx-share"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col ">
+            <div class="card" style="width: 20rem; height: 16rem;">
+                <img src="https://dygtyjqp7pi0m.cloudfront.net/i/24141/23669771_1.jpg?v=8D3197BF58667B0"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <i class="bx bx-heart"></i>
+                    <i class="bx bx-message-rounded"></i>
+                    <i class="bx bx-share"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col ">
+            <div class="card" style="width: 20rem;">
+                <img src="https://artfiles.alphacoders.com/777/77712.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <i class="bx bx-heart"></i>
+                    <i class="bx bx-message-rounded"></i>
+                    <i class="bx bx-share"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col ">
+            <div class="card" style="width: 20rem;">
+                <img src="https://i.pinimg.com/originals/b1/96/49/b196493079f6b27bf15f76e75b0a42ee.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <i class="bx bx-heart"></i>
+                    <i class="bx bx-message-rounded"></i>
+                    <i class="bx bx-share"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col ">
+            <div class="card" style="width: 20rem;">
+                <img src="https://images.template.net/wp-content/uploads/2016/12/06115106/Inspiring-Christmas-Paintings.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <i class="bx bx-heart"></i>
+                    <i class="bx bx-message-rounded"></i>
+                    <i class="bx bx-share"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>&copy;CHIT CHAT</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+    <!-- Page-specific code -->
+    <script src="./posts.js"></script>
+    <script src="profile.js"></script>
+
+</body>
+
+</html>

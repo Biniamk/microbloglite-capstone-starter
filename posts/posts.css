@@ -1,1 +1,44 @@
-/* Posts Page CSS */
+body{
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px;
+} 
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.post {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Times New Roman', Times, serif;
+}
+.post h3 {
+    margin: 0 0 10px;
+}
+.post p {
+    margin: 0 0 5px;
+}
+.post .timestamp {
+    color: #999;
+    font-size: 0.9em;
+}
+
+  #page-container {
+    position: relative;
+    min-height: 50vh;
+  }  
+
+#navdesign{
+    background-color: aliceblue;
+}
