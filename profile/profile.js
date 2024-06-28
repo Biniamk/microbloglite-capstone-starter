@@ -34,6 +34,6 @@ let creatingPost = async (event) => {
     event.target.reset()
         
   } catch (error) {
-    console.log(error);
+
   }
 };

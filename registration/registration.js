@@ -26,13 +26,10 @@ let createUser = async (event)=>{
 
          let newUser = await response.json();
 
-        console.log(newUser, "this should show up if new user is created");
-
         window.location.href = "../index.html";
         
     } catch (error) {
-        console.log("Error occurred:", error);
-        alert("An error occurred while adding the user. Please try again later.");
+        alert("Error");
     }
 
 
